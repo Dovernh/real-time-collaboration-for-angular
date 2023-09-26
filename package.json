@@ -16,6 +16,9 @@
     "@angular/platform-browser-dynamic": "~14.0.2",
     "@ckeditor/ckeditor5-angular": "^7.0.0",
     "@ckeditor/ckeditor5-comments": "^39.0.2",
+    "@ckeditor/ckeditor5-dev-utils": "^39.1.0",
+    "@ckeditor/ckeditor5-theme-lark": "^39.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "zone.js": "~0.11.6"
   },
   "devDependencies": {
