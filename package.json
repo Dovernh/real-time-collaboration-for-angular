@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "serve": "ng serve",
-    "build": "cd vendor/ckeditor5 && npm run build && cd ../.. && ng build --source-map=false",
+    "build:vendor": "cd vendor/ckeditor5 && yarn install && yarn run build && cd ../..",
+    "build:main": "yarn install && ng build --source-map=false",
+    "build": "yarn build:vendor && yarn build:main",
     "start": "http-server -p 8080 dist"
   },
   "dependencies": {
@@ -16,13 +18,13 @@
     "@angular/platform-browser-dynamic": "~14.0.2",
     "@ckeditor/ckeditor5-angular": "^7.0.0",
     "@ckeditor/ckeditor5-comments": "^39.0.2",
-    "@ckeditor/ckeditor5-dev-utils": "^39.1.0",
-    "@ckeditor/ckeditor5-theme-lark": "^39.0.2",
-    "uglifyjs-webpack-plugin": "^2.2.0",
     "zone.js": "~0.11.6"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~14.0.2",
+    "@ckeditor/ckeditor5-dev-utils": "^39.1.0",
+    "@ckeditor/ckeditor5-theme-lark": "^39.0.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "@angular/cli": "~14.0.2",
     "@angular/compiler-cli": "~14.0.2",
     "@types/node": "~18.0.0",
